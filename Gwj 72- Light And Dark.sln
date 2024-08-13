@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gwj 72- Light And Dark", "Gwj 72- Light And Dark.csproj", "{270756F2-F994-483D-9BB1-D7CAA19A9881}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		ExportDebug|Any CPU = ExportDebug|Any CPU
+		ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{270756F2-F994-483D-9BB1-D7CAA19A9881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{270756F2-F994-483D-9BB1-D7CAA19A9881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{270756F2-F994-483D-9BB1-D7CAA19A9881}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{270756F2-F994-483D-9BB1-D7CAA19A9881}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{270756F2-F994-483D-9BB1-D7CAA19A9881}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{270756F2-F994-483D-9BB1-D7CAA19A9881}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B670F91A-0089-49F9-A4DB-604E3EE8109B}
+	EndGlobalSection
+EndGlobal
