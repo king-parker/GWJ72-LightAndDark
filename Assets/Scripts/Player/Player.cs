@@ -16,6 +16,7 @@ public class Player : KinematicBody2D
     private Timer _coyoteTimer;
     private Timer _jumpBufferTimer;
     private Timer _shortHopTimer;
+    private InteractionArea _interactionArea;
     // private GameManager _gameManager;
 
     public override void _Ready()
@@ -36,6 +37,8 @@ public class Player : KinematicBody2D
         _shortHopTimer = GetNode<Timer>("Timers/ShortHopTimer");
         _shortHopTimer.Stop();
 
+        _interactionArea = GetNode<InteractionArea>("InteractionArea");
+
         // _gameManager = GetNode<GameManager>("/root/GameManager");
         // _gameManager.Connect("PlayerDeathEvent", this, "OnDeath");
     }
@@ -49,6 +52,12 @@ public class Player : KinematicBody2D
         //     MoveAndSlide(_velocity, new Vector2(0, -1));
         //     return;
         // }
+
+        // Attempt Interaction
+        if (Input.IsActionJustPressed("interact"))
+            {
+            _interactionArea.AttemptInteraction();
+        }
 
         // Add the gravity.
         if (!IsOnFloor())
