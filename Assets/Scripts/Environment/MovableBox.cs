@@ -3,7 +3,7 @@ using System;
 
 public class MovableBox : RigidBody2D
 {
-    [Export] private float _maxSpeed = 10f;
+    [Export] private float _maxSpeed = 50f;
 
     public override void _IntegrateForces(Physics2DDirectBodyState state)
     {
