@@ -26,6 +26,8 @@ extents = Vector2( 21, 27.5 )
 collision_layer = 2
 collision_mask = 12
 script = ExtResource( 2 )
+_speed = 200.0
+_inertia = 150.0
 
 [node name="PhysicsCollider" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -11.5 )

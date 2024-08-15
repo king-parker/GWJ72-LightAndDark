@@ -6,6 +6,7 @@ public class Player : KinematicBody2D
     [Export] private float _speed = 100.0f;
     [Export] private float _jumpSpeed = 300.0f;
     [Export] private float _gravity = 15.0f;
+    [Export] private float _inertia = 100f;
 
     private Vector2 _velocity = new Vector2();
     private bool _isJumping = false;
@@ -115,7 +116,16 @@ public class Player : KinematicBody2D
 
         // Call MoveAndSlide
         bool wasOnFloor = IsOnFloor();
-        _velocity = MoveAndSlide(_velocity, new Vector2(0, -1));
+        _velocity = MoveAndSlide(_velocity, new Vector2(0, -1), false, 4, 0.785398f, false);
+
+        for (int i = 0; i < GetSlideCount(); i++)
+        {
+            var collision = GetSlideCollision(i);
+            if (collision.Collider is MovableBox)
+            {
+                ((RigidBody2D)collision.Collider).ApplyCentralImpulse(-collision.Normal * _inertia);
+            }
+        }
 
         // Start Coyote timer if not on floor
         if (wasOnFloor && !IsOnFloor())
