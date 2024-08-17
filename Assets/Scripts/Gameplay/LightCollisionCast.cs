@@ -9,6 +9,7 @@ public class LightCollisionCast : CollisionShape2D
     public override void _Ready()
     {
         _rayCast = GetNode<RayCast2D>("RayCast2D");
+        _rayCast.Enabled = true;
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,12 +17,10 @@ public class LightCollisionCast : CollisionShape2D
     {
         if (!Disabled && _rayCast.IsColliding())
         {
-            GD.Print("Colliding, now disabling");
             SetDeferred("disabled", true);
         }
         else if (Disabled && !_rayCast.IsColliding())
         {
-            GD.Print("No more colliding, now enabling");
             SetDeferred("disabled", false);
         }
     }

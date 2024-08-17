@@ -25,7 +25,7 @@ public class Player : KinematicBody2D
         _isAlive = true;
 
         _characterAnimation = GetNode<AnimatedSprite>("CharacterAnimation");
-        _characterAnimation.Play("default");
+        _characterAnimation.Play("idle");
 
         _jumpSound = GetNode<AudioStreamPlayer2D>("Sounds/JumpSound");
 
