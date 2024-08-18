@@ -38,7 +38,9 @@ scale = Vector2( 0.25, 0.25 )
 collision_layer = 2
 collision_mask = 12
 script = ExtResource( 2 )
-_speed = 200.0
+_speed = 400.0
+_jumpSpeed = 725.0
+_gravity = 30.0
 _inertia = 150.0
 
 [node name="PhysicsCollider" type="CollisionShape2D" parent="."]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/TileSets/CastleTileSet.tres" type="TileSet" id=1]
+
+[node name="Ground" type="TileMap"]
+scale = Vector2( 0.25, 0.25 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 256, 256 )
+collision_layer = 4
+collision_mask = 2
+format = 1
