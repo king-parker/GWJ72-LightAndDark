@@ -130,7 +130,7 @@ margin_bottom = 400.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 
-[node name="Sprite" type="Sprite" parent="VBoxContainer/HBoxContainer/Space3"]
+[node name="Vampire" type="Sprite" parent="VBoxContainer/HBoxContainer/Space3"]
 position = Vector2( -16, 227 )
 scale = Vector2( -0.75, 0.75 )
 texture = ExtResource( 4 )
@@ -142,7 +142,7 @@ margin_bottom = 400.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 5.0
 
-[node name="Sprite" type="Sprite" parent="VBoxContainer/HBoxContainer/Space4"]
+[node name="Coffin" type="Sprite" parent="VBoxContainer/HBoxContainer/Space4"]
 position = Vector2( 112, 267 )
 rotation = 0.441568
 scale = Vector2( 1.5, 1.5 )
