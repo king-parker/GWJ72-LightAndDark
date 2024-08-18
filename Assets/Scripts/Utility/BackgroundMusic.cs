@@ -28,15 +28,14 @@ public class BackgroundMusic : Node
 
     public void PlayMenuBG()
     {
-        //if (_playing == TrackPlaying.Menu)
-        //{
-        //    return;
-        //}
+        if (_playing == TrackPlaying.Menu)
+        {
+            return;
+        }
 
-        //StopAllStreams();
-        //_playing = TrackPlaying.Menu;
-        //_menuBG.Play(); 
-        PlayCastleBG();
+        StopAllStreams();
+        _playing = TrackPlaying.Menu;
+        _menuBG.Play();
     }
 
     public void PlayCastleBG()
