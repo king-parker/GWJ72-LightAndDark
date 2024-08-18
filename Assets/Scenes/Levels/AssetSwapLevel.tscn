@@ -128,7 +128,6 @@ tile_data = PoolIntArray( -1835008, 0, 0, -1835007, 0, 0, -1835006, 0, 0, -18350
 
 [node name="Lever1" parent="Levers" instance=ExtResource( 8 )]
 position = Vector2( 1504, -128 )
-scale = Vector2( 2, 2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 480, -128 )

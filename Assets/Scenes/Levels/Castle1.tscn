@@ -34,7 +34,7 @@ position = Vector2( 96, -64 )
 current = true
 limit_left = 0
 limit_top = -1200
-limit_right = 6004
+limit_right = 6000
 limit_bottom = 0
 
 [node name="LevelEndZone" parent="." instance=ExtResource( 4 )]

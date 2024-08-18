@@ -10,7 +10,6 @@ public class Player : KinematicBody2D
 
     private Vector2 _velocity = new Vector2();
     private bool _isJumping = false;
-    private bool _isAlive = true;
     private bool _hasDoubleJump = true;
     private AnimatedSprite _characterAnimation;
     private AudioStreamPlayer2D _jumpSound;
@@ -22,8 +21,6 @@ public class Player : KinematicBody2D
 
     public override void _Ready()
     {
-        _isAlive = true;
-
         _characterAnimation = GetNode<AnimatedSprite>("CharacterAnimation");
         _characterAnimation.Play("idle");
 
@@ -39,21 +36,10 @@ public class Player : KinematicBody2D
         _shortHopTimer.Stop();
 
         _interactionArea = GetNode<InteractionArea>("InteractionArea");
-
-        // _gameManager = GetNode<GameManager>("/root/GameManager");
-        // _gameManager.Connect("PlayerDeathEvent", this, "OnDeath");
     }
 
     public override void _PhysicsProcess(float delta)
     {
-        // if (!_isAlive)
-        // {
-        //     _characterAnimation.Play("jump");
-        //     _velocity.y += _gravity / 4;
-        //     MoveAndSlide(_velocity, new Vector2(0, -1));
-        //     return;
-        // }
-
         // Attempt Interaction
         if (Input.IsActionJustPressed("interact"))
             {
@@ -151,10 +137,4 @@ public class Player : KinematicBody2D
             _hasDoubleJump = false;
         }
     }
-
-    private void OnDeath()
-    {
-        _isAlive = false;
-    }
-
 }

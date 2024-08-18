@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class MainMenu : CanvasLayer
+public class MainMenu : Node
 {
     //private Button _startButton;
     //private Button _exitButton;
